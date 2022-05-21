@@ -5,7 +5,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(cyan, darkblue);
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
     color: whitesmoke;
     height: 100vh;
 }
@@ -15,7 +15,8 @@ h1 {
 }
 
 .Caixa  {
-    background-color: rgba(0, 0, 0, 0.8);
+   border:solid #fff;
+   border-radius: 15px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -60,7 +61,8 @@ a:hover {
 }
 
 .Botão:hover {
-    background-color: skyblue;
+    background-color:rgb(1, 30, 162);
+    transition: 0.3s;
 }
 
 a{
@@ -86,7 +88,7 @@ nav{
     height: 8vh;
 }
 main{ 
-    background-image: linear-gradient(cyan, darkblue 90%);   
+    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );  
     background-size: cover;
     height: 92vh;
     display: flex;
