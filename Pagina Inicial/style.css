@@ -28,88 +28,176 @@
     background-size:cover;
     position: absolute;
     width: 300px;
-    border:5px solid #f4f4f4;
-    border-radius: 15px;
+    border: 3px solid #f4f4f4;
+    border-radius: 10px;
     left: 700px;
     padding: 195px;
 }
 
 a{
+    /*Colocar na cor branca*/
     color: #fff;
+
+    /*Tirando o Sublinhado padrão*/
     text-decoration: none;
+
+    /*Transição para a opacidade depois do mouse estar em cima*/
     transition: 0.3s;
 }
 
 a:hover{
+    /*Opacidade após colocar o mouse em cima*/
     opacity: 0.7;
 }
 .logo {
+    /*Tamanho do texto*/
     font-size: 24px;
+
+    /*Colocando tudo em Maiusculo*/
     text-transform: uppercase;
+
+    /*Mudando o espaçamento das letras na palavras*/
     letter-spacing: 4px;
 }
 nav{
+    /*Alinhando tudo em 1 linha*/
     display: flex;
+    
+   /*Fazer com que o espaço ao redor seja a metade do espaço entre eles*/
     justify-content: space-around;
+    
+    /* Para alinhar Verticalmnente*/
     align-items: center;
+
+    /*Mudando as fontes(Estilo) das letras*/
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    /*Cor do Plano de fundo do Cabeçalho*/
     background: rgb(17, 0, 17);
+
+    /*Colocando um altura para o cabeçalho*/
+    /*a unidade vh é responsiva, que se adapta a altura janela de vizualição do usuario*/
     height: 8vh;
 }
 main{
-   
-    background-image: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+   /*Plano de fundo do conteúdo principal da página*/
+    background: linear-gradient( 109.6deg,  rgba(61,245,167,1) 11.2%, rgba(9,111,224,1) 91.1% );
+    /*Vai especificar o tamanho das imagens de fundo, pode ser mudado par preservar sua proporção*/
+    /*Cover vai fazer com que o main seja coberto ao todo*/
     background-size: cover;
+
+    /*Deixando o Plano de fundo embaixo do nosso cabeçalho*/
     height: 92vh;
 }
 .nav-list{
+    /*Tirar os pontos da lita*/
     list-style: none;
+
+    /*Alinhar horizontalmente*/
     display: flex;
 
 }
 .nav-list li{
+    /*Espaço entre as letras*/
     letter-spacing: 3px;
+
+    /*Para afastar 1 item do outro*/
     margin-left: 32px;
 }
+
+/*PARTE RESPONSIVA DO PROJETO*/
+
+/*Icone do Menu Responsivo*/
 .mobile-menu {
+    
+    /*Parar mostrar a mãozinha do mouse*/
     cursor: pointer;
+
+    /*Para esconder ele do Menu Normal*/
     display: none;
 }
+/*Icone do Menu Responsivo*/
 .mobile-menu div {
+    
+    /*Largura*/
     width: 32px;
+    
+    /*Altura*/
     height: 2px;
+    
+    /*Cor das barras do icone*/
     background: #fff;
+    
+    /*Separar cada barra*/
     margin: 8px;
+
     transition: 0.3s;
 
 }
+footer {
+   position: absolute;
+   bottom: 0%;
+   left: 35%;
+    
+}
+/*Como o site ira se comportar com maior ou igual a 999px de largura*/
 @media (max-width: 999px) {
     body{
+        /*Se algo sair do body, fica escondido*/
         overflow-x: hidden;
     }
     .nav-list{
+        
+        /*Para posicionarmos aonde quisermos o Menu responsivo*/
         position:absolute;
+        
+        /*Para deixarmos abaixo do cabeçalho*/
         top: 8vh;
+        
+        /*Para deixar o menu na direita*/
         right: 0;
+        
+        /*Largura do Menu*/
         width: 50vw;
+
+        /*Altura do Menu*/
         height: 92vh;
-        background: #23232e;
+
+        /*Plano de Fundo do Menu*/
+        background: #0a0a0e;
+        
+        /*Posicionar os elemntos em Coluna*/
         flex-direction: column;
+        
+        /*Alinhar verticalmente*/
         align-items:center;
+        
+        /*Deixar o espaço ao redor seja metade do espaço entre eles*/
         justify-content: space-around;
+
+        /*A navegação vai para fora do site*/
         transform: translate(100%);
         transition: transform 0.3s ease-in;
+        z-index: 1;
 }
 .nav-list li{
+    /*Para eles ficarem corretamente ao centro*/
     margin-left:0;
+
     opacity: 0;
 }
 .mobile-menu{
+    /*Para colocar do jeito correto o Icone do Menu e o Menu*/
     display: block;
 }
+/*Para ativarmos nossa barra lateral*/
 .nav-list.active{
+    /*Para o nosso menu voltar*/
     transform: translateX(0);
 }
+
+}
+
 @keyframes navLinkFade {
     from {
    opacity: 0;
@@ -133,4 +221,4 @@ transform: rotate(-45deg) translate(-8px, 8px);
 
 .A{
     font-size: 100px;
-}}
+}
